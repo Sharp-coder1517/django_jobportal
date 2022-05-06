@@ -1,0 +1,24 @@
+Superuser creds
+
+username:pankaj101
+password:root
+
+
+Job Portal Functionalities for further references
+
+1)Login and Sign up for HR he/her would have access to details of the job seekers, for which authorization is required.
+2)Listing of available jobs.
+3)List of all candidates to the HR.
+
+A)For storing the data we need to connect our server to a database, which models.py will handle.
+B)after that making an (apply form) for job seekers using Django’s ModelForm class.
+C)Then register the models on the admin site so that we can anytime create, update, or delete the model objects.
+
+D)next i also need a superuser who has complete access to all the information.so i create superuser
+E)i used FileField to upload resumes, so we need to configure MEDIA_URL in setting.py as it is not configured by default.
+For this,i append the Media url code in settings.py. Also,I updated the base urls.py file
+
+F)I have created five functions in Viwes.py file 
+If the user is authenticated (HR): It filters all the candidates, applied to HR’s organization, and passes them to the hr.html file, which displays all the candidates in tabular form and also provides an option to download their resumes.
+G)Then there are logout, login, register functions that use Django’s inbuilt UserCreationForm, login, logout function.
+H)I Make a ‘templates’ folder in the project folder to place all the frontend files
